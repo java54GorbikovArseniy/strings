@@ -10,11 +10,11 @@ public class RegularExpressions {
     }
 
     public static String ipOctet(){
-        return "[0-1]\\d\\d|\\d|\\d\\d|[0-2][0-5][0-5]|[0-2][0-4][0-9]";
+        return "[0-1]\\d?\\d?|[0-2][0-5][0-5]|[0-2][0-4][0-9]";
     }
 
     public static String mobileIsraelPhone(){
-        return "^\\+972-?5\\d-?\\d{7}$|05\\d-?\\d{2}-?\\d{2}-?\\d{3}$";
+        return "(\\+972-?5|05)\\d-?\\d{2}-?\\d{2}-?\\d{3}";
     }
 
 }
