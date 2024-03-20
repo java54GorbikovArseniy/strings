@@ -6,10 +6,11 @@ import telran.strings.RegularExpressions;
 import telran.strings.Validations;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 public class ValidationsTest {
 
     @Test
-    void testIsArithmeticExpression(){
+    void testIsArithmeticExpression() {
         //TODO
         assertTrue(Validations.isArithmeticExpression("(2 + 3)"));
         assertTrue(Validations.isArithmeticExpression("((2 + 3))"));
@@ -19,6 +20,7 @@ public class ValidationsTest {
         assertFalse(Validations.isArithmeticExpression("2 + 3)"));
         assertFalse(Validations.isArithmeticExpression("(2 + 3))"));
         assertFalse(Validations.isArithmeticExpression("((2 + 3)"));
+        assertFalse(Validations.isArithmeticExpression("(a + b)) * ((b + a)"));
 
 //        assertFalse(Validations.isArithmeticExpression("")); //This wasn't in the exercise, but I think it would be great to add a check to see if the string is empty or not.
     }

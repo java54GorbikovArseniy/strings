@@ -40,12 +40,12 @@ public class RegularExpressions {
         return "(\\s*\\d+\\s*)";
     }
 
-    private static String doubleNumbersAndVariablesExp(){
-        return "(\\s*\\(*\\s*((\\d+\\.?\\d*)|([A-Za-z$][\\w$]*|\\s*_[\\w$]+))\\s*\\)*\\s*)";
+    private static String doubleNumbersAndVariablesExp() {
+        return "(\\s*\\(*\\s*((\\d+\\.?\\d*)|(" + javaVariable() + "))\\s*\\)*\\s*)";
     }
 
-    public static String arithmeticExpression(){
-            return String.format("%1$s(%2$s%1$s)*", doubleNumbersAndVariablesExp(),operationExp());
+    public static String arithmeticExpression() {
+        return String.format("%1$s(%2$s%1$s)*", doubleNumbersAndVariablesExp(), operationExp());
     }
 
 }
