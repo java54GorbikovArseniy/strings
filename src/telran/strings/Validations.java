@@ -13,6 +13,6 @@ public class Validations {
                 validBrackets = false;
             }
         }
-        return counterBrackets == 0 && validBrackets;
+        return counterBrackets == 0 && validBrackets && expression.matches(RegularExpressions.arithmeticExpression());
     }
 }

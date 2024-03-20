@@ -17,6 +17,7 @@ public class ValidationsTest {
         assertTrue(Validations.isArithmeticExpression("2 + 3 * (34 - 5)"));
 
         assertFalse(Validations.isArithmeticExpression("(2 + 3"));
+        assertFalse(Validations.isArithmeticExpression("(2 ++ 3)"));
         assertFalse(Validations.isArithmeticExpression("2 + 3)"));
         assertFalse(Validations.isArithmeticExpression("(2 + 3))"));
         assertFalse(Validations.isArithmeticExpression("((2 + 3)"));
